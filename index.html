@@ -3,79 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ProcurIA - Catálogo interativo de ferramentas de IA para educação e pesquisa">
-    <meta name="theme-color" content="#6B46C1">
+    <meta name="description" content="ProcurIA - Descubra ferramentas de inteligência artificial para educação, pesquisa e produtividade">
+    <meta name="keywords" content="inteligência artificial, ferramentas de IA, educação, pesquisa, produtividade">
+    <meta name="theme-color" content="#5D5CDE">
     <meta property="og:title" content="ProcurIA - Ferramentas de IA">
-    <meta property="og:description" content="Explore ferramentas de IA para aprendizado e pesquisa acadêmica.">
+    <meta property="og:description" content="Explore um catálogo interativo de ferramentas de IA para aprendizado e pesquisa acadêmica.">
     <meta property="og:image" content="https://procur-ia.vercel.app/assets/og-image.png">
     <meta property="og:url" content="https://procur-ia.vercel.app">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ProcurIA - Ferramentas de IA">
-    <meta name="twitter:description" content="Descubra ferramentas de IA para transformar sua produtividade.">
+    <meta name="twitter:description" content="Descubra ferramentas de IA para transformar sua produtividade e aprendizado.">
     <meta name="twitter:image" content="https://procur-ia.vercel.app/assets/og-image.png">
-    <link rel="icon" type="image/png" href="https://procur-ia.vercel.app/assets/favicon.png">
-    <title>ProcurIA - Ferramentas de IA</title>
+    <link rel="icon" type="image/png" href="https://procur-ia.vercel.app/assets/favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://procur-ia.vercel.app/assets/favicon-16.png" sizes="16x16">
+    <title>ProcurIA - Ferramentas de Inteligência Artificial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Carregando QR Code.js diretamente -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ProcurIA",
+        "url": "https://procur-ia.vercel.app",
+        "description": "Catálogo interativo de ferramentas de inteligência artificial para educação e pesquisa."
+    }
+    </script>
     <style>
-:root {
-    --primary: #4169E1; /* azul royal */
-    --primary-dark: #27408B; /* azul royal escuro */
-    --primary-light: #6A8DFF; /* azul royal claro */
-    --primary-lighter: #D6E0FF; /* azul royal bem claro */
-    --accent: #F56565;
-    --accent-dark: #E53E3E;
-    --success: #38A169;
-    --warning: #F6AD55;
-    --info: #63B3ED;
-    --gradient-1: linear-gradient(135deg, var(--primary), var(--primary-light));
-    --gradient-2: linear-gradient(135deg, var(--primary-dark), var(--primary));
-    --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-dark));
-    --bg-main: #F7FAFC;
-    --bg-card: #FFFFFF;
-    --bg-header: rgba(247, 250, 252, 0.9);
-    --bg-footer: rgba(65, 105, 225, 0.1); /* baseado no azul royal */
-    --bg-modal: rgba(255, 255, 255, 0.95);
-    --text-main: #1A202C;
-    --text-secondary: #718096;
-    --text-title: #102060;
-    --shadow: 0 10px 30px rgba(65, 105, 225, 0.15);
-    --shadow-sm: 0 4px 15px rgba(65, 105, 225, 0.1);
-    --shadow-hover: 0 15px 40px rgba(65, 105, 225, 0.25);
-    --border-color: rgba(65, 105, 225, 0.2);
-    --transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-    --transition-slow: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
+        :root {
+            --primary: #5D5CDE;
+            --primary-dark: #4645C4;
+            --accent: #F472B6;
+            --success: #34D399;
+            --highlight: #FCD34D;
+            --neutral: #E2E8F0;
+            --bg-main: #FFFFFF;
+            --bg-card: linear-gradient(145deg, #FFFFFF, #F8FAFC);
+            --bg-header: rgba(255, 255, 255, 0.92);
+            --bg-footer: linear-gradient(180deg, rgba(93, 92, 222, 0.08), rgba(93, 92, 222, 0.04));
+            --bg-modal: rgba(255, 255, 255, 0.96);
+            --text-main: #0F172A;
+            --text-secondary: #64748B;
+            --text-title: linear-gradient(90deg, #5D5CDE, #7877E6);
+            --border-color: rgba(93, 92, 222, 0.15);
+            --shadow: 0 10px 30px rgba(93, 92, 222, 0.12);
+            --shadow-sm: 0 5px 15px rgba(93, 92, 222, 0.08);
+            --shadow-hover: 0 15px 40px rgba(93, 92, 222, 0.2);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-primary: 'Poppins', sans-serif;
+            --font-secondary: 'Space Grotesk', sans-serif;
+        }
 
-.dark-mode {
-    --bg-main: #0E152B;
-    --bg-card: #1A2450;
-    --bg-header: rgba(14, 21, 43, 0.9);
-    --bg-footer: rgba(65, 105, 225, 0.2);
-    --bg-modal: rgba(26, 36, 80, 0.95);
-    --text-main: #E2E8F0;
-    --text-secondary: #A0AEC0;
-    --text-title: #F7FAFC;
-    --primary-lighter: rgba(65, 105, 225, 0.3);
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.5);
-    --border-color: rgba(65, 105, 225, 0.4);
-}
+        .dark-mode {
+            --bg-main: #181818;
+            --bg-card: linear-gradient(145deg, #1E293B, #2D3748);
+            --bg-header: rgba(24, 24, 24, 0.92);
+            --bg-footer: linear-gradient(180deg, rgba(93, 92, 222, 0.15), rgba(93, 92, 222, 0.1));
+            --bg-modal: linear-gradient(135deg, rgba(24, 24, 24, 0.96), rgba(30, 41, 59, 0.96));
+            --text-main: #E2E8F0;
+            --text-secondary: #94A3B8;
+            --text-title: linear-gradient(90deg, #7877E6, #9897EC);
+            --border-color: rgba(93, 92, 222, 0.3);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.3);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; font-size: 16px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-main);
+            font-family: var(--font-primary);
+            background: var(--bg-main);
             color: var(--text-main);
             line-height: 1.6;
-            transition: background-color var(--transition-slow), color var(--transition-slow);
+            transition: background var(--transition);
             overflow-x: hidden;
             position: relative;
+            will-change: background;
+        }
+
+        #themeTransitionOverlay {
+            position: fixed;
+            top: -100%;
+            left: -100%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, var(--primary-dark), var(--primary));
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        #themeTransitionOverlay.active {
+            opacity: 1;
+            transform: translate(50%, 50%);
+        }
+
+        .page-loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--bg-main), rgba(93, 92, 222, 0.15));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            opacity: 1;
+            transition: opacity 0.8s ease;
+        }
+
+        .page-loading-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .page-loading-spinner {
+            font-size: 2.5rem;
+            color: var(--primary);
+            animation: spin3D 1.5s linear infinite;
+        }
+
+        .page-loading-progress {
+            width: 200px;
+            height: 4px;
+            background: var(--neutral);
+            border-radius: 2px;
+            margin-top: 16px;
+            overflow: hidden;
+        }
+
+        .page-loading-progress-bar {
+            width: 0;
+            height: 100%;
+            background: var(--primary);
+            animation: progress 1.5s ease-in-out forwards;
+        }
+
+        .page-loading-text {
+            margin-top: 16px;
+            font-family: var(--font-secondary);
+            font-size: 1.3rem;
+            background: var(--text-title);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .bg-particles {
@@ -86,35 +174,93 @@
             height: 100%;
             z-index: -1;
             pointer-events: none;
-            background: linear-gradient(180deg, rgba(107, 70, 193, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-            transition: var(--transition-slow);
+            background: linear-gradient(45deg, rgba(93, 92, 222, 0.05), rgba(244, 114, 182, 0.05));
+            animation: gradientShift 15s ease infinite;
+            opacity: 0.8;
         }
 
         .dark-mode .bg-particles {
-            background: linear-gradient(180deg, rgba(107, 70, 193, 0.2) 0%, rgba(26, 16, 58, 0) 100%);
+            background: linear-gradient(45deg, rgba(93, 92, 222, 0.1), rgba(244, 114, 182, 0.1));
         }
 
         .particle {
             position: absolute;
             border-radius: 50%;
-            background: var(--primary-light);
-            opacity: 0.4;
-            box-shadow: 0 0 15px rgba(107, 70, 193, 0.5);
-            transition: transform var(--transition), opacity var(--transition);
+            background: var(--primary);
+            opacity: 0.3;
+            box-shadow: 0 0 10px rgba(93, 92, 222, 0.4);
+            transition: transform var(--transition), opacity 0.5s ease;
+            will-change: transform, opacity;
         }
 
-        .dark-mode .particle {
-            background: var(--primary-lighter);
-            box-shadow: 0 0 15px rgba(107, 70, 193, 0.3);
+        .particle.fade {
+            opacity: 0;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes glow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        @keyframes spin3D {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+
+        @keyframes progress {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .particle, .card, .modal, .toast, .back-to-top, .search-loading, .page-loading-spinner, .page-loading-progress-bar, #themeTransitionOverlay {
+                transition: none !important;
+                animation: none !important;
+            }
         }
 
         @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(15px, -25px) scale(1.2); }
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(10px, -20px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes typing {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        @keyframes cardEnter {
+            0% { opacity: 0; transform: translateY(30px) rotate(3deg); }
+            100% { opacity: 1; transform: translateY(0) rotate(0); }
+        }
+
+        @keyframes ripple {
+            0% { transform: scale(0); opacity: 0.5; }
+            100% { transform: scale(4); opacity: 0; }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -468px 0; }
+            100% { background-position: 468px 0; }
         }
 
         .container {
-            max-width: 1440px;
+            max-width: 1320px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -127,42 +273,44 @@
 
         .header {
             background: var(--bg-header);
-            padding: 16px 0;
+            padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 100;
             box-shadow: var(--shadow-sm);
-            backdrop-filter: blur(20px);
-            transition: var(--transition);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            animation: slideInDown 0.8s ease-out forwards;
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 16px;
+            gap: 24px;
         }
 
         .logo-container h1 {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: var(--font-secondary);
             font-size: clamp(2rem, 4vw, 2.5rem);
-            background: var(--gradient-1);
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            position: relative;
+            background: var(--text-title);
             -webkit-background-clip: text;
             background-clip: text;
-            color: transparent;
-            position: relative;
-            letter-spacing: -0.02em;
+            -webkit-text-fill-color: transparent;
         }
 
         .logo-container h1::after {
             content: '';
             position: absolute;
-            bottom: -4px;
+            bottom: -6px;
             left: 0;
             width: 0;
             height: 3px;
-            background: var(--gradient-1);
-            transition: width var(--transition-slow);
+            background: var(--highlight);
+            transition: width var(--transition);
         }
 
         .logo-container h1:hover::after {
@@ -186,24 +334,52 @@
             background: var(--bg-footer);
             padding: 24px 0;
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             border-top: 1px solid var(--border-color);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease-out 1s forwards;
+            animation: fadeInUp 1.2s ease-out forwards;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .footer-link {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .footer-link:hover,
+        .footer-link:focus-visible {
+            color: var(--primary);
+            transform: rotate(360deg);
+        }
+
+        .footer-link:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
         }
 
         @keyframes fadeInUp {
-            to { opacity: 1; transform: translateY(0); }
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInDown {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         .search-container {
             max-width: 900px;
             margin: 0 auto 48px;
             text-align: center;
+            animation: fadeInUp 0.8s ease-out 0.3s forwards;
             opacity: 0;
             transform: translateY(20px);
-            animation: fadeInUp 0.8s ease-out 0.3s forwards;
         }
 
         .subtitle {
@@ -211,8 +387,8 @@
             color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto 24px;
-            line-height: 1.5;
-            font-weight: 400;
+            font-weight: 300;
+            letter-spacing: 0.03em;
         }
 
         .search-bar {
@@ -222,37 +398,104 @@
 
         .search-input {
             width: 100%;
-            padding: 16px 24px 16px 56px;
-            border-radius: 999px;
+            max-width: 700px;
+            padding: 18px 28px 18px 56px;
+            border-radius: 60px;
             border: 1px solid var(--border-color);
-            background: var(--bg-card);
+            background: linear-gradient(145deg, var(--bg-card), rgba(93, 92, 222, 0.05));
             color: var(--text-main);
-            font-size: 1rem;
+            font-size: 1.1rem;
             outline: none;
             transition: var(--transition);
-            box-shadow: var(--shadow-sm);
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05), var(--shadow-sm);
+            will-change: box-shadow, border-color;
         }
 
         .search-input:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 12px rgba(107, 70, 193, 0.3);
-            transform: scale(1.02);
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05), 0 0 15px rgba(93, 92, 222, 0.4);
         }
 
         .search-input:focus + .search-icon {
             color: var(--primary);
-            transform: translateY(-50%) scale(1.2);
+            transform: translateY(-50%) scale(1.2) rotate(360deg);
+        }
+
+        .search-input:focus-visible {
+            outline: 2px solid var(--highlight);
+            outline-offset: 2px;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-secondary);
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: typing 2s steps(20, end) forwards;
+        }
+
+        .search-input:focus::placeholder {
+            animation: none;
+            width: auto;
         }
 
         .search-icon {
             position: absolute;
-            left: 20px;
+            left: 24px;
             top: 50%;
             transform: translateY(-50%);
             color: var(--text-secondary);
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             pointer-events: none;
             transition: var(--transition);
+        }
+
+        .search-suggestion {
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+
+        .search-input:focus ~ .search-suggestion {
+            opacity: 1;
+        }
+
+        .search-loading {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin: 16px auto;
+            font-family: var(--font-secondary);
+            max-width: 200px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: var(--bg-card);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .search-loading.active {
+            display: flex;
+        }
+
+        .search-loading-spinner {
+            font-size: 1.1rem;
+            color: var(--primary);
+            animation: spin 1s linear infinite, glow 1.5s ease-in-out infinite;
+        }
+
+        .search-loading-text {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: typing 1s steps(12, end) forwards;
         }
 
         .category-filter {
@@ -261,12 +504,41 @@
             gap: 12px;
             justify-content: center;
             margin-bottom: 32px;
-            opacity: 0;
             animation: fadeInUp 0.8s ease-out 0.5s forwards;
+            opacity: 0;
+            position: relative;
+        }
+
+        .category-filter::before,
+        .category-filter::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 24px;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .category-filter::before {
+            left: 0;
+            background: linear-gradient(to right, var(--bg-main), transparent);
+        }
+
+        .category-filter::after {
+            right: 0;
+            background: linear-gradient(to left, var(--bg-main), transparent);
+        }
+
+        .dark-mode .category-filter::before {
+            background: linear-gradient(to right, var(--bg-main), transparent);
+        }
+
+        .dark-mode .category-filter::after {
+            background: linear-gradient(to left, var(--bg-main), transparent);
         }
 
         .category-btn {
-            padding: 10px 20px;
+            padding: 10px 24px;
             border-radius: 999px;
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -274,45 +546,47 @@
             font-weight: 500;
             font-size: 0.95rem;
             cursor: pointer;
-            transition: var(--transition);
             position: relative;
             overflow: hidden;
+            transition: var(--transition);
         }
 
-        .category-btn::before {
+        .category-btn::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-1);
-            opacity: 0.2;
-            transition: left 0.4s ease;
-        }
-
-        .category-btn:hover, .category-btn:focus {
-            color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .category-btn:hover::before {
+            bottom: 0;
             left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width var(--transition);
         }
 
+        .category-btn:hover,
+        .category-btn:focus-visible,
         .category-btn.active {
-            background: var(--gradient-1);
-            color: white;
-            border-color: transparent;
-            box-shadow: var(--shadow-hover);
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+            box-shadow: var(--shadow-sm);
+            transform: translateY(-2px);
+        }
+
+        .category-btn:hover::after,
+        .category-btn.active::after {
+            width: 100%;
+        }
+
+        .category-btn:focus-visible {
+            outline: 2px solid var(--highlight);
+            outline-offset: 2px;
         }
 
         .results-count {
             font-size: 0.95rem;
             color: var(--text-secondary);
+            animation: fadeIn 0.8s ease-out 0.7s forwards;
             opacity: 0;
-            animation: fadeIn 1s ease-out 0.7s forwards;
         }
 
         .cards-grid {
@@ -324,7 +598,7 @@
 
         .card {
             background: var(--bg-card);
-            border-radius: 20px;
+            border-radius: 24px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border-color);
             transition: var(--transition);
@@ -333,26 +607,21 @@
             overflow: hidden;
             position: relative;
             transform-style: preserve-3d;
-            opacity: 0;
-            transform: translateY(30px) rotateX(5deg);
-            animation: cardReveal 0.8s ease-out forwards;
+            animation: cardEnter 0.7s ease-out forwards;
+            will-change: transform, box-shadow;
         }
 
         .card:nth-child(2) { animation-delay: 0.1s; }
         .card:nth-child(3) { animation-delay: 0.2s; }
         .card:nth-child(4) { animation-delay: 0.3s; }
 
-        @keyframes cardReveal {
-            to { opacity: 1; transform: translateY(0) rotateX(0); }
-        }
-
         .card:hover {
-            transform: translateY(-8px) scale(1.02) rotateX(-2deg);
+            transform: translateY(-10px);
             box-shadow: var(--shadow-hover);
         }
 
         .card-content {
-            padding: 24px;
+            padding: 28px;
             display: flex;
             flex-direction: column;
             gap: 16px;
@@ -362,59 +631,39 @@
         .icon-wrapper {
             width: 56px;
             height: 56px;
-            border-radius: 12px;
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.8rem;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .icon-wrapper::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
-            opacity: 0;
+            color: #fff;
+            font-size: 2rem;
             transition: var(--transition);
         }
 
-        .card:hover .icon-wrapper::before {
-            opacity: 1;
-            transform: scale(0.5);
+        .icon-wrapper:hover {
+            transform: rotate(10deg);
         }
 
         .card-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
+            font-family: var(--font-secondary);
+            font-size: 1.6rem;
             font-weight: 600;
-            color: var(--text-title);
+            background: var(--text-title);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             line-height: 1.3;
+            letter-spacing: 0.02em;
         }
 
         .card-description {
             color: var(--text-secondary);
             font-size: 0.95rem;
             line-height: 1.5;
-        }
-
-        .card-tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .card-tag {
-            padding: 4px 12px;
-            border-radius: 999px;
-            background: var(--primary-lighter);
-            color: var(--primary);
-            font-size: 0.85rem;
-            font-weight: 500;
+            font-weight: 300;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInUp 0.5s ease-out 0.3s forwards;
         }
 
         .card-actions {
@@ -425,38 +674,49 @@
         }
 
         .card-link {
-            color: white;
+            color: #fff;
             text-decoration: none;
             font-weight: 600;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 999px;
-            background: var(--gradient-1);
+            background: var(--primary);
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            transition: var(--transition);
             position: relative;
             overflow: hidden;
+            transition: var(--transition);
         }
 
         .card-link::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
             background: rgba(255, 255, 255, 0.3);
-            transition: left 0.3s ease;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
         }
 
-        .card-link:hover::before {
-            left: 100%;
+        .card-link:hover::before,
+        .card-link:focus-visible::before {
+            width: 300px;
+            height: 300px;
         }
 
-        .card-link:hover {
-            background: var(--gradient-2);
-            transform: translateY(-2px);
+        .card-link:hover,
+        .card-link:focus-visible {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(93, 92, 222, 0.4);
+        }
+
+        .card-link:focus-visible {
+            outline: 2px solid var(--highlight);
+            outline-offset: 2px;
         }
 
         .card-action-btn {
@@ -465,7 +725,7 @@
             background: none;
             border: none;
             cursor: pointer;
-            padding: 8px;
+            padding: 10px;
             border-radius: 50%;
             transition: var(--transition);
             width: 36px;
@@ -473,17 +733,43 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .card-action-btn:hover {
+        .card-action-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(93, 92, 222, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+        }
+
+        .card-action-btn:hover::before,
+        .card-action-btn:focus-visible::before {
+            width: 100px;
+            height: 100px;
+        }
+
+        .card-action-btn:hover,
+        .card-action-btn:focus-visible {
             color: var(--primary);
-            background: var(--primary-lighter);
-            transform: scale(1.1);
+            background: rgba(93, 92, 222, 0.1);
+        }
+
+        .card-action-btn:focus-visible {
+            outline: 2px solid var(--highlight);
+            outline-offset: 2px;
         }
 
         .theme-switch {
             position: relative;
-            width: 60px;
+            width: 56px;
             height: 30px;
         }
 
@@ -500,7 +786,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: var(--gradient-1);
+            background: var(--primary);
             border-radius: 999px;
             transition: var(--transition);
             display: flex;
@@ -516,61 +802,72 @@
             width: 24px;
             left: 3px;
             bottom: 3px;
-            background-color: white;
+            background-color: #fff;
             border-radius: 50%;
             transition: var(--transition);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .theme-icon {
-            color: white;
-            font-size: 16px;
+            color: #fff;
+            font-size: 15px;
             transition: var(--transition);
         }
 
         input:checked + .theme-slider {
-            background: linear-gradient(to right, #2D3748, #5A67D8);
+            background: var(--primary-dark);
         }
 
         input:checked + .theme-slider::before {
-            transform: translateX(30px);
+            transform: translateX(26px);
         }
 
         .share-button {
-            background: var(--gradient-1);
-            color: white;
+            background: var(--primary);
+            color: #fff;
             border: none;
             border-radius: 999px;
-            padding: 10px 20px;
+            padding: 12px 24px;
             font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
             display: flex;
             align-items: center;
             gap: 8px;
-            transition: var(--transition);
             position: relative;
             overflow: hidden;
+            transition: var(--transition);
         }
 
         .share-button::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
             background: rgba(255, 255, 255, 0.3);
-            transition: left 0.3s ease;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
         }
 
-        .share-button:hover::before {
-            left: 100%;
+        .share-button:hover::before,
+        .share-button:focus-visible::before {
+            width: 300px;
+            height: 300px;
         }
 
-        .share-button:hover {
-            background: var(--gradient-2);
-            transform: translateY(-2px);
+        .share-button:hover,
+        .share-button:focus-visible {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(93, 92, 222, 0.4);
+        }
+
+        .share-button:focus-visible {
+            outline: 2px solid var(--highlight);
+            outline-offset: 2px;
         }
 
         .modal-overlay {
@@ -587,7 +884,8 @@
             opacity: 0;
             visibility: hidden;
             transition: var(--transition);
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
         }
 
         .modal-overlay.active {
@@ -597,20 +895,24 @@
 
         .modal {
             background: var(--bg-modal);
-            border-radius: 20px;
-            padding: 32px;
+            border-radius: 24px;
+            padding: 28px;
             max-width: 550px;
             width: 90%;
-            box-shadow: var(--shadow-hover);
-            transform: scale(0.8) translateY(50px);
-            opacity: 0;
-            transition: var(--transition-slow);
+            box-shadow: var(--shadow);
             border: 1px solid var(--border-color);
+            transform: scale(0.9) rotate(2deg);
+            opacity: 0;
+            transition: var(--transition);
         }
 
         .modal-overlay.active .modal {
-            transform: scale(1) translateY(0);
+            transform: scale(1) rotate(0);
             opacity: 1;
+        }
+
+        .modal-overlay:not(.active) .modal {
+            transform: scale(0.8) rotate(-2deg);
         }
 
         .modal-header {
@@ -621,16 +923,20 @@
         }
 
         .modal-title {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: var(--font-secondary);
             font-size: 1.8rem;
             font-weight: 600;
-            color: var(--text-title);
+            background: var(--text-title);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.02em;
         }
 
         .modal-close {
             background: none;
             border: none;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             cursor: pointer;
             color: var(--text-secondary);
             transition: var(--transition);
@@ -640,18 +946,45 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .modal-close:hover {
+        .modal-close::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(93, 92, 222, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+        }
+
+        .modal-close:hover::before,
+        .modal-close:focus-visible::before {
+            width: 100px;
+            height: 100px;
+        }
+
+        .modal-close:hover,
+        .modal-close:focus-visible {
             color: var(--primary);
-            background: var(--primary-lighter);
-            transform: rotate(90deg);
+            background: rgba(93, 92, 222, 0.1);
+        }
+
+        .modal-close:focus-visible {
+            outline: 2px solid var(--highlight);
+            outline-offset: 2px;
         }
 
         .modal-content p {
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             color: var(--text-secondary);
             font-size: 0.95rem;
+            font-weight: 300;
         }
 
         .modal-actions {
@@ -661,38 +994,45 @@
         }
 
         .modal-btn {
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 999px;
             font-weight: 600;
             cursor: pointer;
-            transition: var(--transition);
             position: relative;
             overflow: hidden;
+            transition: var(--transition);
         }
 
         .modal-btn::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
             background: rgba(255, 255, 255, 0.3);
-            transition: left 0.3s ease;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
         }
 
-        .modal-btn:hover::before {
-            left: 100%;
+        .modal-btn:hover::before,
+        .modal-btn:focus-visible::before {
+            width: 300px;
+            height: 300px;
         }
 
         .modal-btn.primary {
-            background: var(--gradient-1);
-            color: white;
+            background: var(--primary);
+            color: #fff;
             border: none;
         }
 
-        .modal-btn.primary:hover {
-            background: var(--gradient-2);
+        .modal-btn.primary:hover,
+        .modal-btn.primary:focus-visible {
+            background: var(--primary-dark);
+            box-shadow: 0 0 15px rgba(93, 92, 222, 0.4);
+            transform: translateY(-2px);
         }
 
         .modal-btn.secondary {
@@ -701,21 +1041,69 @@
             color: var(--text-secondary);
         }
 
-        .modal-btn.secondary:hover {
+        .modal-btn.secondary:hover,
+        .modal-btn.secondary:focus-visible {
             border-color: var(--primary);
             color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .modal-btn:focus-visible {
+            outline: 2px solid var(--highlight);
+            outline-offset: 2px;
+        }
+
+        /* Container do QR Code corrigido */
+        .qr-code-wrapper {
+            position: relative;
+            margin: 24px auto;
+            text-align: center;
+            padding: 16px;
+            background: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            border: 2px solid transparent;
+            width: max-content;
+        }
+
+        .qr-code-wrapper::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            z-index: -1;
+            border-radius: 16px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        #qrCode {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-radius: 8px;
+            padding: 12px;
+            min-height: 160px;
+            min-width: 160px;
+        }
+
+        .dark-mode #qrCode {
+            background: var(--bg-card);
         }
 
         .toast {
             position: fixed;
             bottom: 24px;
             right: 24px;
-            background: var(--success);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 12px;
+            background: linear-gradient(135deg, var(--success), var(--primary));
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 14px;
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(30px);
             transition: var(--transition);
             z-index: 1100;
             box-shadow: var(--shadow-sm);
@@ -729,40 +1117,75 @@
         .back-to-top {
             position: fixed;
             bottom: 24px;
-            right: 24px;
-            background: var(--gradient-1);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(30px);
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
             transition: var(--transition);
-            z-index: 100;
+            z-index: 200;
             box-shadow: var(--shadow-sm);
-        }
-
-        .back-to-top:hover {
-            background: var(--gradient-2);
-            transform: scale(1.1);
+            position: relative;
+            overflow: hidden;
         }
 
         .back-to-top.visible {
             opacity: 1;
             visibility: visible;
+            transform: translateX(-50%) translateY(0);
+            animation: bounce 0.6s ease-in-out 2;
+        }
+
+        .back-to-top::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .back-to-top:hover::before,
+        .back-to-top:focus-visible::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .back-to-top:hover,
+        .back-to-top:focus-visible {
+            background: var(--primary-dark);
+            transform: translateX(-50%) scale(1.1) rotate(360deg);
+            box-shadow: 0 0 15px rgba(93, 92, 222, 0.5);
+        }
+
+        .back-to-top:focus-visible {
+            outline: 2px solid var(--highlight);
+            outline-offset: 2px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
         }
 
         .no-results {
             text-align: center;
             padding: 64px 0;
             display: none;
-            opacity: 0;
-            animation: fadeIn 1s ease-out forwards;
+            animation: fadeIn 0.8s ease-out forwards;
         }
 
         .no-results i {
@@ -773,30 +1196,183 @@
 
         .badge {
             position: absolute;
-            top: 16px;
             right: 16px;
-            padding: 6px 14px;
+            padding: 8px 16px;
             border-radius: 999px;
             font-size: 0.85rem;
             font-weight: 600;
-            color: white;
-            background: var(--accent);
-            transform: translateY(-10px);
+            color: #fff;
+            animation: badgePop 0.6s ease-out forwards;
             opacity: 0;
-            animation: badgePop 0.5s ease-out 0.5s forwards;
+            transform: translateY(-10px);
+        }
+
+        .badge-popular {
+            top: 16px;
+            background: var(--accent);
+            box-shadow: 0 0 10px rgba(244, 114, 182, 0.5);
+        }
+
+        .badge-new {
+            top: 48px;
+            background: var(--success);
+            box-shadow: 0 0 10px rgba(52, 211, 153, 0.5);
+            animation-delay: 0.2s;
+        }
+
+        .category-tag {
+            display: inline-block;
+            padding: 5px 10px;
+            background: rgba(93, 92, 222, 0.1);
+            color: var(--primary);
+            border-radius: 999px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .skeleton-loader {
+            background: linear-gradient(90deg, 
+                var(--bg-card) 25%, 
+                rgba(93, 92, 222, 0.1) 50%, 
+                var(--bg-card) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 8px;
+        }
+
+        .feature-list {
+            margin: 16px 0;
+            padding-left: 20px;
+        }
+        
+        .feature-list li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: '•';
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
         }
 
         @keyframes badgePop {
-            to { opacity: 1; transform: translateY(0); }
+            0% { opacity: 0; transform: translateY(-10px) scale(0.8); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
         }
 
         @keyframes fadeIn {
             to { opacity: 1; }
         }
 
+        .github-cta {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95));
+            color: #fff;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            padding: 14px 20px;
+            box-shadow: var(--shadow);
+            z-index: 150;
+            transition: var(--transition);
+            animation: slideInRight 1s ease-out forwards;
+        }
+
+        .github-cta:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .github-cta .logo {
+            font-size: 1.5rem;
+            margin-right: 12px;
+            transition: var(--transition);
+        }
+
+        .github-cta:hover .logo {
+            transform: translateY(-5px);
+        }
+
+        .github-cta .text {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .github-cta:hover .text {
+            transform: translateY(-2px);
+        }
+
+        .github-cta .text span {
+            color: #A0AEC0;
+            font-size: 0.85rem;
+        }
+
+        .github-cta .button {
+            margin-left: 20px;
+            background: #fff;
+            color: #0F172A;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .github-cta .button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(93, 92, 222, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .github-cta .button:hover::before,
+        .github-cta .button:focus-visible::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .github-cta .button:hover,
+        .github-cta .button:focus-visible {
+            background: var(--neutral);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .github-cta .button:focus-visible {
+            outline: 2px solid var(--highlight);
+            outline-offset: 2px;
+        }
+
+        @keyframes slideInRight {
+            0% { opacity: 0; transform: translateX(50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
         @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
             .header-content {
-                flex-direction: row;
                 gap: 12px;
             }
 
@@ -810,6 +1386,7 @@
                 overflow-x: auto;
                 padding-bottom: 12px;
                 scrollbar-width: none;
+                -ms-overflow-style: none;
             }
 
             .category-filter::-webkit-scrollbar {
@@ -819,16 +1396,33 @@
             .main-content {
                 padding: 48px 0;
             }
+
+            .search-input {
+                max-width: 100%;
+                padding: 16px 24px 16px 52px;
+                font-size: 1rem;
+            }
+
+            .back-to-top {
+                width: 44px;
+                height: 44px;
+                font-size: 1.1rem;
+            }
+
+            .github-cta {
+                padding: 12px 16px;
+                font-size: 0.9rem;
+            }
+
+            .github-cta .button {
+                padding: 8px 14px;
+                font-size: 0.9rem;
+            }
         }
 
         @media (max-width: 480px) {
-            .container {
-                padding: 0 16px;
-            }
-
-            .search-input {
-                padding: 14px 20px 14px 48px;
-                font-size: 0.95rem;
+            .logo-container h1 {
+                font-size: 1.8rem;
             }
 
             .modal {
@@ -836,25 +1430,46 @@
             }
 
             .card-title {
-                font-size: 1.3rem;
+                font-size: 1.4rem;
+            }
+
+            .search-input {
+                padding: 14px 20px 14px 48px;
+                font-size: 0.95rem;
+            }
+
+            .page-loading-spinner {
+                font-size: 2rem;
+            }
+
+            .page-loading-text {
+                font-size: 1.1rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="bg-particles" id="bgParticles" aria-hidden="true"></div>
+    <div id="themeTransitionOverlay"></div>
+    <div class="page-loading-overlay" id="pageLoadingOverlay" aria-live="polite">
+        <i class="fas fa-spinner page-loading-spinner"></i>
+        <div class="page-loading-progress">
+            <div class="page-loading-progress-bar"></div>
+        </div>
+        <p class="page-loading-text">Carregando ProcurIA...</p>
+    </div>
+    <canvas id="particleCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.8;" aria-hidden="true"></canvas>
     <div class="page-wrapper">
-        <header class="header">
+        <header class="header" role="banner">
             <div class="container">
                 <div class="header-content">
                     <div class="logo-container">
                         <h1>ProcurIA</h1>
                     </div>
                     <div class="header-actions">
-                        <button class="share-button" id="mainShareButton">
+                        <button class="share-button" id="mainShareButton" aria-label="Compartilhar página">
                             <i class="fas fa-share-alt"></i> Compartilhar
                         </button>
-                        <label class="theme-switch">
+                        <label class="theme-switch" aria-label="Alternar tema claro/escuro">
                             <input type="checkbox" id="themeToggle">
                             <span class="theme-slider">
                                 <i class="fas fa-sun theme-icon"></i>
@@ -866,27 +1481,30 @@
             </div>
         </header>
 
-        <main class="main-content">
+        <main class="main-content" role="main">
             <div class="container">
                 <div class="search-container">
-                    <p class="subtitle">Descubra ferramentas de inteligência artificial para transformar seu aprendizado e pesquisa.</p>
+                    <p class="subtitle">Explore ferramentas de inteligência artificial para revolucionar seu aprendizado e pesquisa.</p>
                     <div class="search-bar">
                         <input type="text" class="search-input" id="searchInput" placeholder="Buscar ferramentas..." aria-label="Buscar ferramentas de IA">
                         <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                        <span class="search-suggestion">Tente "Chatbots" ou "Pesquisa"</span>
                     </div>
-                    <div class="category-filter" id="categoryFilter">
-                        <button class="category-btn active" data-category="all">Todas</button>
-                        <button class="category-btn" data-category="chat">Chatbots</button>
-                        <button class="category-btn" data-category="research">Pesquisa</button>
-                        <button class="category-btn" data-category="writing">Escrita</button>
-                        <button class="category-btn" data-category="tools">Ferramentas</button>
+                    <div class="search-loading" id="searchLoading" aria-busy="false">
+                        <i class="fas fa-spinner search-loading-spinner"></i>
+                        <span class="search-loading-text">Procurando...</span>
                     </div>
-                    <div class="results-count" id="resultsCount">Mostrando 20 ferramentas</div>
+                    <div class="category-filter" id="categoryFilter" role="region" aria-label="Filtros de categoria">
+                        <button class="category-btn active" data-category="all" aria-pressed="true">Todas</button>
+                        <button class="category-btn" data-category="chat" aria-pressed="false">Chatbots</button>
+                        <button class="category-btn" data-category="research" aria-pressed="false">Pesquisa</button>
+                        <button class="category-btn" data-category="writing" aria-pressed="false">Escrita</button>
+                        <button class="category-btn" data-category="tools" aria-pressed="false">Ferramentas</button>
+                    </div>
+                    <div class="results-count" id="resultsCount">Mostrando 0 ferramentas</div>
                 </div>
 
-                <div class="cards-grid" id="cardsGrid">
-                    <!-- Cards serão gerados dinamicamente pelo JavaScript -->
-                </div>
+                <div class="cards-grid" id="cardsGrid" role="region" aria-label="Lista de ferramentas"></div>
 
                 <div class="no-results" id="noResults">
                     <i class="fas fa-search"></i>
@@ -895,14 +1513,19 @@
             </div>
         </main>
 
-        <footer class="footer">
+        <footer class="footer" role="contentinfo">
             <div class="container">
-                <p>© DevGus - ProcurIA. Todos os direitos reservados v1.2/2025.</p>
+                <p>© DevGus - ProcurIA. Todos os direitos reservados v1.3/2025.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/xGus0" class="footer-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/SEU_USUARIO" class="footer-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/in/SEU_USUARIO" class="footer-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
         </footer>
     </div>
 
-    <div class="modal-overlay" id="detailsModal">
+    <div class="modal-overlay" id="detailsModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
         <div class="modal">
             <div class="modal-header">
                 <h2 class="modal-title" id="modalTitle">Detalhes da Ferramenta</h2>
@@ -913,21 +1536,23 @@
             </div>
             <div class="modal-actions">
                 <button class="modal-btn secondary" id="modalCloseBtn">Fechar</button>
-                <a href="#" class="modal-btn primary" id="modalLink" target="_blank">Acessar</a>
+                <a href="#" class="modal-btn primary" id="modalLink" target="_blank" rel="noopener noreferrer">Acessar</a>
             </div>
         </div>
     </div>
 
-    <div class="modal-overlay" id="shareModal">
+    <div class="modal-overlay" id="shareModal" role="dialog" aria-labelledby="shareModalTitle" aria-hidden="true">
         <div class="modal">
             <div class="modal-header">
-                <h2 class="modal-title">Compartilhar Ferramenta</h2>
+                <h2 class="modal-title" id="shareModalTitle">Compartilhar Ferramenta</h2>
                 <button class="modal-close" id="shareModalClose" aria-label="Fechar modal"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-content">
                 <p>Compartilhe esta ferramenta com seus colegas:</p>
                 <input type="text" id="shareLink" readonly class="search-input" aria-label="Link para compartilhamento">
-                <div id="qrCode" style="margin: 20px 0; text-align: center;"></div>
+                <div class="qr-code-wrapper">
+                    <div id="qrCode"></div>
+                </div>
             </div>
             <div class="modal-actions">
                 <button class="modal-btn secondary" id="shareModalCloseBtn">Fechar</button>
@@ -936,10 +1561,10 @@
         </div>
     </div>
 
-    <div class="modal-overlay" id="redirectNotification">
+    <div class="modal-overlay" id="redirectNotification" role="dialog" aria-labelledby="redirectModalTitle" aria-hidden="true">
         <div class="modal">
             <div class="modal-header">
-                <h2 class="modal-title">Redirecionamento</h2>
+                <h2 class="modal-title" id="redirectModalTitle">Redirecionamento</h2>
                 <button class="modal-close" id="redirectModalClose" aria-label="Fechar modal"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-content">
@@ -952,10 +1577,18 @@
         </div>
     </div>
 
-    <div class="toast" id="copyToast">Link copiado para a área de transferência!</div>
-    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+    <div class="github-cta" role="complementary" aria-label="Link para o repositório no GitHub">
+        <div class="logo">🚀</div>
+        <div class="text">
+            <strong>GitHub</strong>
+            <span>Explore o código-fonte</span>
+        </div>
+        <a class="button" href="https://github.com/xGus0/ProcurIA" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <div class="toast" id="copyToast" role="alert" aria-live="polite">Link copiado para a área de transferência!</div>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao início da página"><i class="fas fa-arrow-up"></i></button>
+
     <script>
         // Dados das ferramentas
         const toolData = {
@@ -1192,17 +1825,19 @@
     icon: "fa-solid fa-lightbulb",
     isNew: true
 }
-
         };
 
         // Elementos do DOM
         const elements = {
             searchInput: document.getElementById('searchInput'),
+            searchLoading: document.getElementById('searchLoading'),
             categoryFilter: document.getElementById('categoryFilter'),
             cardsGrid: document.getElementById('cardsGrid'),
             noResults: document.getElementById('noResults'),
             resultsCount: document.getElementById('resultsCount'),
             themeToggle: document.getElementById('themeToggle'),
+            themeTransitionOverlay: document.getElementById('themeTransitionOverlay'),
+            pageLoadingOverlay: document.getElementById('pageLoadingOverlay'),
             detailsModal: document.getElementById('detailsModal'),
             shareModal: document.getElementById('shareModal'),
             redirectNotification: document.getElementById('redirectNotification'),
@@ -1214,7 +1849,7 @@
             qrCode: document.getElementById('qrCode'),
             copyToast: document.getElementById('copyToast'),
             backToTop: document.getElementById('backToTop'),
-            bgParticles: document.getElementById('bgParticles'),
+            particleCanvas: document.getElementById('particleCanvas'),
             mainShareButton: document.getElementById('mainShareButton'),
             detailsModalClose: document.getElementById('detailsModalClose'),
             modalCloseBtn: document.getElementById('modalCloseBtn'),
@@ -1228,8 +1863,9 @@
 
         let redirectTimeout = null;
         let particles = [];
+        let isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        // Função de debounce para otimizar eventos
+        // Função de debounce para melhorar desempenho
         const debounce = (func, wait) => {
             let timeout;
             return (...args) => {
@@ -1238,166 +1874,516 @@
             };
         };
 
-        // Criação de partículas animadas
-        const createParticles = () => {
-            try {
-                const particleCount = window.innerWidth < 768 ? 20 : 50;
-                elements.bgParticles.innerHTML = '';
-                particles = [];
-                for (let i = 0; i < particleCount; i++) {
-                    const particle = document.createElement('div');
-                    particle.classList.add('particle');
-                    const size = Math.random() * 6 + 4;
-                    particle.style.width = `${size}px`;
-                    particle.style.height = `${size}px`;
-                    particle.style.left = `${Math.random() * 100}%`;
-                    particle.style.top = `${Math.random() * 100}%`;
-                    particle.style.animation = `float ${Math.random() * 12 + 8}s ease-in-out ${Math.random() * 5}s infinite alternate`;
-                    elements.bgParticles.appendChild(particle);
-                    particles.push({ element: particle, x: 0, y: 0 });
+        // Partículas interativas com canvas - otimizadas para performance
+        const initParticles = () => {
+            if (isReducedMotion || !elements.particleCanvas) {
+                if (elements.particleCanvas) {
+                    elements.particleCanvas.style.display = 'none';
                 }
-            } catch (error) {
-                console.error('Erro ao criar partículas:', error);
+                return;
             }
+
+            const canvas = elements.particleCanvas;
+            const ctx = canvas.getContext('2d', { alpha: true });
+            
+            // Ajusta o tamanho do canvas para o tamanho da tela
+            const resizeCanvas = () => {
+                const dpr = window.devicePixelRatio || 1;
+                canvas.width = window.innerWidth * dpr;
+                canvas.height = window.innerHeight * dpr;
+                ctx.scale(dpr, dpr);
+                canvas.style.width = window.innerWidth + 'px';
+                canvas.style.height = window.innerHeight + 'px';
+            };
+            
+            resizeCanvas();
+
+            // Reduz número de partículas em dispositivos móveis
+            const isMobile = window.innerWidth < 768;
+            const particleCount = isMobile ? 8 : 15;
+            const maxDistance = isMobile ? 80 : 100;
+            
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    size: Math.random() * 4 + 2,
+                    speedX: Math.random() * 0.4 - 0.2,
+                    speedY: Math.random() * 0.4 - 0.2
+                });
+            }
+
+            let mouse = { x: null, y: null };
+            let frameSkip = isMobile ? 2 : 1; // Pula frames em dispositivos móveis
+            let frameCount = 0;
+            
+            // Limita eventos de movimentação do mouse
+            const throttleMouseMove = debounce((e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+            }, 16);
+            
+            window.addEventListener('mousemove', throttleMouseMove);
+            window.addEventListener('touchmove', (e) => {
+                if (e.touches.length > 0) {
+                    throttleMouseMove({
+                        clientX: e.touches[0].clientX,
+                        clientY: e.touches[0].clientY
+                    });
+                }
+            });
+
+            const animate = (timestamp) => {
+                // Pula frames para melhorar performance
+                frameCount++;
+                if (frameCount % frameSkip !== 0) {
+                    requestAnimationFrame(animate);
+                    return;
+                }
+                
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                const isDarkMode = document.body.classList.contains('dark-mode');
+                const particleColor = isDarkMode ? '#7877E6' : '#5D5CDE';
+                const particleOpacity = isDarkMode ? 0.4 : 0.3;
+                
+                for (let i = 0; i < particles.length; i++) {
+                    const p = particles[i];
+                    
+                    // Atualiza posição
+                    p.x += p.speedX;
+                    p.y += p.speedY;
+                    
+                    // Rebate nas bordas
+                    if (p.x < 0 || p.x > window.innerWidth) p.speedX *= -1;
+                    if (p.y < 0 || p.y > window.innerHeight) p.speedY *= -1;
+                    
+                    // Reação ao mouse
+                    if (mouse.x && mouse.y) {
+                        const dx = mouse.x - p.x;
+                        const dy = mouse.y - p.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        if (distance < 80) {
+                            const force = (80 - distance) / 80;
+                            p.x -= dx * force * 0.03;
+                            p.y -= dy * force * 0.03;
+                        }
+                    }
+                    
+                    // Desenha partícula
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fillStyle = `${particleColor}${Math.floor(particleOpacity * 255).toString(16).padStart(2, '0')}`;
+                    ctx.fill();
+                }
+                
+                // Conexões entre partículas - otimizado
+                if (!isMobile) {
+                    ctx.lineWidth = 1;
+                    for (let i = 0; i < particles.length; i++) {
+                        for (let j = i + 1; j < particles.length; j++) {
+                            const dx = particles[i].x - particles[j].x;
+                            const dy = particles[i].y - particles[j].y;
+                            const distance = Math.sqrt(dx * dx + dy * dy);
+                            if (distance < maxDistance) {
+                                ctx.beginPath();
+                                ctx.moveTo(particles[i].x, particles[i].y);
+                                ctx.lineTo(particles[j].x, particles[j].y);
+                                const opacity = 1 - distance / maxDistance;
+                                ctx.strokeStyle = `rgba(93, 92, 222, ${opacity * 0.3})`;
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                }
+                
+                requestAnimationFrame(animate);
+            };
+            
+            animate();
+            
+            // Tratamento de redimensionamento
+            const handleResize = debounce(() => {
+                resizeCanvas();
+            }, 250);
+            
+            window.addEventListener('resize', handleResize);
         };
 
-        // Atualização de partículas com interação do mouse
-        const updateParticles = (mouseX, mouseY) => {
-            try {
-                particles.forEach(p => {
-                    const rect = p.element.getBoundingClientRect();
-                    const dx = mouseX - (rect.left + rect.width / 2);
-                    const dy = mouseY - (rect.top + rect.height / 2);
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    if (distance < 150) {
-                        const angle = Math.atan2(dy, dx);
-                        const force = (150 - distance) / 150;
-                        p.x -= Math.cos(angle) * force * 10;
-                        p.y -= Math.sin(angle) * force * 10;
-                    }
-                    p.x *= 0.95;
-                    p.y *= 0.95;
-                    p.element.style.transform = `translate(${p.x}px, ${p.y}px)`;
+        // Efeito de tilt nos cards - otimizado
+        const initCardTilt = () => {
+            if (isReducedMotion) return;
+            
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                let timeout;
+                
+                const handleMouseMove = (e) => {
+                    if (timeout) return;
+                    
+                    timeout = setTimeout(() => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+                        const rotateX = (y - centerY) / centerY * 4; 
+                        const rotateY = (centerX - x) / centerX * 4;
+                        
+                        card.style.transform = `translateY(-10px) rotate3d(${rotateX}, ${rotateY}, 0, 3deg)`;
+                        timeout = null;
+                    }, 10);
+                };
+                
+                card.addEventListener('mousemove', handleMouseMove);
+                card.addEventListener('mouseleave', () => {
+                    clearTimeout(timeout);
+                    card.style.transform = 'translateY(-10px)';
                 });
-            } catch (error) {
-                console.error('Erro ao atualizar partículas:', error);
-            }
+            });
         };
 
         // Renderização dos cards
         const renderCards = () => {
             try {
-                if (!elements.cardsGrid) {
-                    console.error('Elemento cardsGrid não encontrado');
-                    return;
-                }
-                
+                if (!elements.cardsGrid) throw new Error('Elemento cardsGrid não encontrado');
                 elements.cardsGrid.innerHTML = '';
-                
-                // Converter o objeto toolData em um array para facilitar o uso
                 const toolsArray = Object.values(toolData);
                 
                 if (toolsArray.length === 0) {
                     elements.noResults.style.display = 'block';
                     elements.resultsCount.textContent = 'Mostrando 0 ferramentas';
+                    elements.noResults.innerHTML = `
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Ops! Nenhuma ferramenta disponível no momento. Volte mais tarde!</p>
+                    `;
                     return;
                 }
-                
-                toolsArray.forEach((tool, index) => {
-                    const card = document.createElement('div');
-                    card.classList.add('card');
-                    card.dataset.categories = tool.categories.join(',');
-                    card.dataset.toolId = tool.id;
-                    card.style.animationDelay = `${index * 0.1}s`;
-                    
-                    let badgeHTML = '';
-                    if (tool.isPopular) {
-                        badgeHTML = '<span class="badge badge-popular">Popular</span>';
-                    } else if (tool.isNew) {
-                        badgeHTML = '<span class="badge badge-new">Novo</span>';
+
+                // Carregamento com skeleton loaders
+                if (!isReducedMotion) {
+                    for (let i = 0; i < Math.min(8, toolsArray.length); i++) {
+                        const skeleton = document.createElement('div');
+                        skeleton.classList.add('card', 'skeleton-loader');
+                        skeleton.innerHTML = `
+                            <div class="card-content" style="height: 260px;"></div>
+                        `;
+                        elements.cardsGrid.appendChild(skeleton);
                     }
                     
-                    card.innerHTML = `
-                        ${badgeHTML}
-                        <div class="card-content">
-                            <div class="icon-wrapper" style="background: ${tool.iconBg}">
-                                <i class="${tool.icon}"></i>
-                                <div class="icon-shimmer"></div>
-                            </div>
-                            <div class="card-text">
-                                <h3 class="card-title">${tool.title}</h3>
-                                <p class="card-description">${tool.description}</p>
-                                <div class="card-actions">
-                                    <a href="${tool.url}" target="_blank" class="card-link" data-site-name="${tool.title}">Acessar <i class="fas fa-arrow-right"></i></a>
-                                    <div>
-                                        <button class="card-action-btn card-share" data-share="${tool.id}" aria-label="Compartilhar ${tool.title}">
-                                            <i class="fas fa-share-alt"></i>
-                                        </button>
-                                        <button class="card-action-btn card-details" data-tool-id="${tool.id}" aria-label="Ver mais detalhes sobre ${tool.title}">
-                                            <i class="fas fa-info-circle"></i>
-                                        </button>
+                    // Simula carregamento dos dados
+                    setTimeout(() => {
+                        elements.cardsGrid.innerHTML = '';
+                        renderToolCards();
+                    }, 500);
+                } else {
+                    renderToolCards();
+                }
+                
+                function renderToolCards() {
+                    toolsArray.forEach((tool, index) => {
+                        const card = document.createElement('div');
+                        card.classList.add('card');
+                        card.dataset.categories = tool.categories.join(',');
+                        card.dataset.toolId = tool.id;
+                        card.setAttribute('aria-labelledby', `title-${tool.id}`);
+                        
+                        if (!isReducedMotion) {
+                            card.style.animationDelay = `${index * 0.1}s`;
+                        }
+
+                        let badgesHTML = '';
+                        if (tool.isPopular) {
+                            badgesHTML += '<span class="badge badge-popular" aria-label="Ferramenta popular">Popular</span>';
+                        }
+                        if (tool.isNew) {
+                            badgesHTML += '<span class="badge badge-new" aria-label="Nova ferramenta">Novo</span>';
+                        }
+
+                        card.innerHTML = `
+                            ${badgesHTML}
+                            <div class="card-content">
+                                <div class="icon-wrapper" style="background: ${tool.iconBg}" aria-hidden="true">
+                                    <i class="${tool.icon}"></i>
+                                </div>
+                                <div class="card-text">
+                                    <h3 class="card-title" id="title-${tool.id}">${tool.title}</h3>
+                                    <p class="card-description">${tool.description}</p>
+                                    <div class="card-actions">
+                                        <a href="${tool.url}" target="_blank" rel="noopener noreferrer" class="card-link" data-site-name="${tool.title}">
+                                            Acessar <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                        <div>
+                                            <button class="card-action-btn card-share" data-share="${tool.id}" aria-label="Compartilhar ${tool.title}">
+                                                <i class="fas fa-share-alt" aria-hidden="true"></i>
+                                            </button>
+                                            <button class="card-action-btn card-details" data-tool-id="${tool.id}" aria-label="Ver mais detalhes sobre ${tool.title}">
+                                                <i class="fas fa-info-circle" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    `;
-                    
-                    elements.cardsGrid.appendChild(card);
-                });
+                        `;
+
+                        elements.cardsGrid.appendChild(card);
+                    });
+
+                    elements.resultsCount.textContent = `Mostrando ${toolsArray.length} ${toolsArray.length === 1 ? 'ferramenta' : 'ferramentas'}`;
+                    attachCardEventListeners();
+                    initCardTilt();
+                }
                 
-                elements.resultsCount.textContent = `Mostrando ${toolsArray.length} ferramentas`;
-                attachCardEventListeners();
-                filterCards();
+                filterCards(true); // Skip animation on initial load
             } catch (error) {
                 console.error('Erro ao renderizar cards:', error);
+                elements.noResults.style.display = 'block';
+                elements.resultsCount.textContent = 'Erro ao carregar ferramentas';
+                elements.noResults.innerHTML = `
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Erro ao carregar as ferramentas. Por favor, tente novamente mais tarde.</p>
+                `;
             }
         };
 
-        // Filtro de cards por busca e categoria
-        const filterCards = () => {
+        // Filtro de cards com loading
+        const filterCards = (skipAnimation = false) => {
             try {
-                const searchText = elements.searchInput?.value.trim().toLowerCase() || '';
-                const activeCategory = elements.categoryFilter?.querySelector('.category-btn.active')?.dataset.category || 'all';
-                let visibleCount = 0;
-
-                const cards = elements.cardsGrid.querySelectorAll('.card');
-                if (!cards.length) {
-                    elements.noResults.style.display = 'block';
-                    elements.resultsCount.textContent = 'Mostrando 0 ferramentas';
-                    return;
+                if (!elements.searchLoading) throw new Error('Elemento searchLoading não encontrado');
+                
+                if (!skipAnimation) {
+                    elements.searchLoading.classList.add('active');
+                    elements.searchLoading.setAttribute('aria-busy', 'true');
                 }
+                
+                const applyFilter = () => {
+                    const searchText = elements.searchInput?.value.trim().toLowerCase() || '';
+                    const activeCategory = elements.categoryFilter?.querySelector('.category-btn.active')?.dataset.category || 'all';
+                    let visibleCount = 0;
 
-                cards.forEach(card => {
-                    const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
-                    const description = card.querySelector('.card-description')?.textContent.toLowerCase() || '';
-                    const categories = card.dataset.categories?.split(',') || [];
-
-                    const matchesSearch = searchText === '' || title.includes(searchText) || description.includes(searchText);
-                    const matchesCategory = activeCategory === 'all' || categories.includes(activeCategory);
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = 'flex';
-                        visibleCount++;
-                    } else {
-                        card.style.display = 'none';
+                    const cards = elements.cardsGrid.querySelectorAll('.card');
+                    if (!cards.length) {
+                        elements.noResults.style.display = 'block';
+                        elements.resultsCount.textContent = 'Mostrando 0 ferramentas';
+                        elements.searchLoading.classList.remove('active');
+                        elements.searchLoading.setAttribute('aria-busy', 'false');
+                        return;
                     }
-                });
 
-                elements.noResults.style.display = visibleCount === 0 ? 'block' : 'none';
-                elements.resultsCount.textContent = `Mostrando ${visibleCount} ${visibleCount === 1 ? 'ferramenta' : 'ferramentas'}`;
+                    cards.forEach(card => {
+                        // Pula os skeleton loaders
+                        if (card.classList.contains('skeleton-loader')) {
+                            return;
+                        }
+                        
+                        const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
+                        const description = card.querySelector('.card-description')?.textContent.toLowerCase() || '';
+                        const categories = card.dataset.categories?.split(',') || [];
+
+                        const matchesSearch = searchText === '' || 
+                                             title.includes(searchText) || 
+                                             description.includes(searchText);
+                        const matchesCategory = activeCategory === 'all' || categories.includes(activeCategory);
+
+                        if (matchesSearch && matchesCategory) {
+                            card.style.display = 'flex';
+                            visibleCount++;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    elements.noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+                    elements.resultsCount.textContent = `Mostrando ${visibleCount} ${visibleCount === 1 ? 'ferramenta' : 'ferramentas'}`;
+                    elements.searchLoading.classList.remove('active');
+                    elements.searchLoading.setAttribute('aria-busy', 'false');
+                };
+                
+                if (skipAnimation) {
+                    applyFilter();
+                } else {
+                    setTimeout(applyFilter, 300);
+                }
             } catch (error) {
                 console.error('Erro ao filtrar cards:', error);
+                elements.searchLoading.classList.remove('active');
+                elements.searchLoading.setAttribute('aria-busy', 'false');
             }
         };
 
-        // Alternância de tema claro/escuro
+        // Alternância de tema
         const toggleTheme = () => {
             try {
-                document.body.classList.toggle('dark-mode');
-                localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-                createParticles();
+                if (!elements.themeTransitionOverlay) throw new Error('Elemento themeTransitionOverlay não encontrado');
+                
+                if (!isReducedMotion) {
+                    elements.themeTransitionOverlay.classList.add('active');
+                }
+                
+                setTimeout(() => {
+                    document.body.classList.toggle('dark-mode');
+                    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+                    
+                    // Regenerar partículas com nova cor
+                    if (elements.particleCanvas && !isReducedMotion) {
+                        initParticles();
+                    }
+                    
+                    // Recarregar QR Code se estiver visível
+                    if (elements.shareModal.classList.contains('active') && elements.qrCode.innerHTML) {
+                        const url = elements.shareLink.value;
+                        generateQRCode(url);
+                    }
+                    
+                    if (!isReducedMotion) {
+                        elements.themeTransitionOverlay.classList.remove('active');
+                    }
+                }, isReducedMotion ? 0 : 600);
             } catch (error) {
                 console.error('Erro ao alternar tema:', error);
+                document.body.classList.toggle('dark-mode');
+                localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+            }
+        };
+
+        // Geração de QR Code corrigida
+        const generateQRCode = (url) => {
+            try {
+                if (!elements.qrCode) throw new Error('Elemento qrCode não encontrado');
+                
+                // Limpa o conteúdo anterior
+                elements.qrCode.innerHTML = `
+                    <div style="padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                        <i class="fas fa-spinner fa-spin" style="font-size: 24px; color: var(--primary);"></i>
+                        <span>Gerando QR Code...</span>
+                    </div>
+                `;
+                
+                // Aguarda um momento para garantir que o DOM foi atualizado
+                setTimeout(() => {
+                    // Limpa novamente antes de criar o QR Code
+                    elements.qrCode.innerHTML = '';
+                    
+                    if (typeof QRCode !== 'undefined') {
+                        try {
+                            new QRCode(elements.qrCode, {
+                                text: url,
+                                width: 160,
+                                height: 160,
+                                colorDark: document.body.classList.contains('dark-mode') ? '#E2E8F0' : '#0F172A',
+                                colorLight: document.body.classList.contains('dark-mode') ? '#1E293B' : '#FFFFFF',
+                                correctLevel: QRCode.CorrectLevel.H
+                            });
+                        } catch (qrError) {
+                            console.error('Erro ao gerar QR Code:', qrError);
+                            elements.qrCode.innerHTML = '<p>Erro ao gerar QR Code. Tente novamente.</p>';
+                        }
+                    } else {
+                        console.error('Biblioteca QRCode não está disponível');
+                        elements.qrCode.innerHTML = '<p>Erro: Biblioteca QR Code não carregada.</p>';
+                    }
+                }, 200);
+            } catch (error) {
+                console.error('Erro ao gerar QR Code:', error);
+                if (elements.qrCode) {
+                    elements.qrCode.innerHTML = '<p>Erro ao gerar QR Code.</p>';
+                }
+            }
+        };
+
+        // Manipulação de eventos dos cards
+        const attachCardEventListeners = () => {
+            try {
+                // Botões de compartilhamento
+                document.querySelectorAll('.card-share').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const toolId = button.dataset.share;
+                        const tool = toolData[toolId];
+                        if (!tool) {
+                            console.error('Ferramenta não encontrada:', toolId);
+                            return;
+                        }
+                        elements.shareLink.value = tool.url;
+                        openModal(elements.shareModal, {
+                            title: `Compartilhar ${tool.title}`,
+                            body: `<p>Compartilhe <strong>${tool.title}</strong> com seus colegas:</p>`
+                        });
+                        generateQRCode(tool.url);
+                    });
+                });
+
+                // Botões de detalhes
+                document.querySelectorAll('.card-details').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const toolId = button.dataset.toolId;
+                        const tool = toolData[toolId];
+                        if (!tool) {
+                            console.error('Ferramenta não encontrada:', toolId);
+                            return;
+                        }
+                        
+                        const featuresList = tool.features ? 
+                            `<h4 style="margin-top: 16px; margin-bottom: 8px; color: var(--text-main);">Funcionalidades:</h4>
+                            <ul class="feature-list">
+                                ${tool.features.map(f => `<li>${f}</li>`).join('')}
+                            </ul>` : '';
+                            
+                        openModal(elements.detailsModal, {
+                            title: tool.title,
+                            body: `
+                                <p>${tool.description}</p>
+                                ${featuresList}
+                                <div style="margin-top: 16px;">
+                                    <p style="margin-bottom: 8px; color: var(--text-main);">Categorias:</p>
+                                    <div>
+                                        ${tool.categories.map(cat => {
+                                            const catMap = {
+                                                'chat': 'Chatbots',
+                                                'research': 'Pesquisa',
+                                                'writing': 'Escrita',
+                                                'tools': 'Ferramentas'
+                                            };
+                                            return `<span class="category-tag">${catMap[cat] || cat}</span>`;
+                                        }).join('')}
+                                    </div>
+                                </div>
+                            `,
+                            link: tool.url
+                        });
+                    });
+                });
+
+                // Links com notificação de redirecionamento
+                document.querySelectorAll('.card-link').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const url = link.href;
+                        const siteName = link.dataset.siteName || 'site externo';
+                        elements.siteName.textContent = siteName;
+                        openModal(elements.redirectNotification);
+
+                        clearTimeout(redirectTimeout);
+                        redirectTimeout = setTimeout(() => {
+                            window.open(url, '_blank');
+                            closeModal(elements.redirectNotification);
+                        }, 3000);
+
+                        elements.confirmRedirect.onclick = () => {
+                            clearTimeout(redirectTimeout);
+                            window.open(url, '_blank');
+                            closeModal(elements.redirectNotification);
+                        };
+
+                        elements.cancelRedirect.onclick = () => {
+                            clearTimeout(redirectTimeout);
+                            closeModal(elements.redirectNotification);
+                        };
+                    });
+                });
+            } catch (error) {
+                console.error('Erro ao configurar eventos dos cards:', error);
             }
         };
 
@@ -1406,15 +2392,26 @@
             try {
                 if (!modal) throw new Error('Modal não encontrado');
                 modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
                 document.body.style.overflow = 'hidden';
+                
                 if (content.title) {
                     elements.modalTitle.textContent = content.title;
                     elements.modalContent.innerHTML = content.body || '<p>Conteúdo não disponível.</p>';
+                    
                     if (content.link && elements.modalLink) {
                         elements.modalLink.href = content.link;
                         elements.modalLink.textContent = `Acessar ${content.title}`;
                     }
                 }
+                
+                // Foca o primeiro elemento interativo do modal para acessibilidade
+                setTimeout(() => {
+                    const firstFocusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                    if (firstFocusable) {
+                        firstFocusable.focus();
+                    }
+                }, 100);
             } catch (error) {
                 console.error('Erro ao abrir modal:', error);
             }
@@ -1425,10 +2422,8 @@
             try {
                 if (!modal) throw new Error('Modal não encontrado');
                 modal.classList.remove('active');
+                modal.setAttribute('aria-hidden', 'true');
                 document.body.style.overflow = '';
-                if (modal === elements.shareModal && elements.qrCode) {
-                    elements.qrCode.innerHTML = '';
-                }
             } catch (error) {
                 console.error('Erro ao fechar modal:', error);
             }
@@ -1440,254 +2435,194 @@
                 if (!elements.copyToast) throw new Error('Elemento toast não encontrado');
                 elements.copyToast.textContent = message;
                 elements.copyToast.classList.add('active');
-                setTimeout(() => elements.copyToast.classList.remove('active'), 3000);
+                elements.copyToast.setAttribute('aria-hidden', 'false');
+                
+                setTimeout(() => {
+                    elements.copyToast.classList.remove('active');
+                    elements.copyToast.setAttribute('aria-hidden', 'true');
+                }, 3000);
             } catch (error) {
                 console.error('Erro ao exibir toast:', error);
             }
         };
 
-        // Geração de QR Code
-        const generateQRCode = (url) => {
-            try {
-                if (!elements.qrCode) throw new Error('Elemento qrCode não encontrado');
-                elements.qrCode.innerHTML = '';
-                new QRCode(elements.qrCode, {
-                    text: url,
-                    width: 140,
-                    height: 140,
-                    colorDark: document.body.classList.contains('dark-mode') ? '#E2E8F0' : '#1A202C',
-                    colorLight: document.body.classList.contains('dark-mode') ? '#2D1B5E' : '#FFFFFF'
-                });
-            } catch (error) {
-                console.error('Erro ao gerar QR Code:', error);
-            }
-        };
-
-        // Manipulação de compartilhamento
-        const handleShare = (toolId) => {
-            try {
-                let shareUrl = window.location.href;
-                let toolTitle = 'ProcurIA';
-                
-                if (toolId && toolData[toolId]) {
-                    const tool = toolData[toolId];
-                    shareUrl = tool.url;
-                    toolTitle = tool.title;
+        // Detecção de preferência de movimento reduzido
+        const checkReducedMotion = () => {
+            const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+            isReducedMotion = mediaQuery.matches;
+            
+            mediaQuery.addEventListener('change', () => {
+                isReducedMotion = mediaQuery.matches;
+                if (isReducedMotion && elements.particleCanvas) {
+                    elements.particleCanvas.style.display = 'none';
+                } else if (elements.particleCanvas) {
+                    elements.particleCanvas.style.display = 'block';
+                    initParticles();
                 }
-                
-                if (elements.shareLink) {
-                    elements.shareLink.value = shareUrl;
-                }
-                generateQRCode(shareUrl);
-                openModal(elements.shareModal, { title: `Compartilhar ${toolTitle}` });
-            } catch (error) {
-                console.error('Erro ao compartilhar:', error);
-            }
-        };
-
-        // Manipulação de detalhes
-        const handleDetails = (toolId) => {
-            try {
-                if (!toolData[toolId]) throw new Error('Ferramenta não encontrada');
-                
-                const tool = toolData[toolId];
-                const featuresHTML = tool.features.map(feature => `<li>${feature}</li>`).join('');
-                
-                const detailsHTML = `
-                    <div style="margin-bottom: 20px;">
-                        <p style="margin-bottom: 16px;">${tool.description}</p>
-                        <h3 style="margin-bottom: 8px; color: var(--text-title); font-size: 1.1rem;">Principais recursos:</h3>
-                        <ul style="margin-left: 20px; margin-bottom: 16px;">
-                            ${featuresHTML}
-                        </ul>
-                        <p style="font-style: italic; color: var(--text-secondary);">Categorias: ${tool.categories.map(cat => cat.charAt(0).toUpperCase() + cat.slice(1)).join(', ')}</p>
-                    </div>
-                `;
-                
-                openModal(elements.detailsModal, {
-                    title: tool.title,
-                    body: detailsHTML,
-                    link: tool.url
-                });
-            } catch (error) {
-                console.error('Erro ao exibir detalhes:', error);
-            }
-        };
-
-        // Manipulação de redirecionamento
-        const handleRedirect = (e, link, siteName) => {
-            try {
-                e.preventDefault();
-                if (!elements.siteName) throw new Error('Elemento siteName não encontrado');
-                elements.siteName.textContent = siteName;
-                openModal(elements.redirectNotification);
-                redirectTimeout = setTimeout(() => {
-                    window.open(link, '_blank');
-                    closeModal(elements.redirectNotification);
-                }, 3000);
-            } catch (error) {
-                console.error('Erro ao redirecionar:', error);
-            }
-        };
-
-        // Anexação de eventos aos cards
-        const attachCardEventListeners = () => {
-            try {
-                const cards = elements.cardsGrid.querySelectorAll('.card');
-                cards.forEach(card => {
-                    const shareBtn = card.querySelector('.card-share');
-                    const detailsBtn = card.querySelector('.card-details');
-                    const link = card.querySelector('.card-link');
-
-                    if (shareBtn) {
-                        shareBtn.onclick = () => handleShare(shareBtn.dataset.share);
-                    }
-                    if (detailsBtn) {
-                        detailsBtn.onclick = () => handleDetails(detailsBtn.dataset.toolId);
-                    }
-                    if (link) {
-                        link.onclick = (e) => handleRedirect(e, link.href, link.dataset.siteName);
-                    }
-
-                    // Efeito 3D nos cards
-                    card.addEventListener('mousemove', (e) => {
-                        const rect = card.getBoundingClientRect();
-                        const x = e.clientX - rect.left - rect.width / 2;
-                        const y = e.clientY - rect.top - rect.height / 2;
-                        card.style.transform = `translateY(-8px) scale(1.02) rotateX(${-y / 50}deg) rotateY(${x / 50}deg)`;
-                    });
-
-                    card.addEventListener('mouseleave', () => {
-                        card.style.transform = 'translateY(0) scale(1) rotateX(0) rotateY(0)';
-                    });
-                });
-            } catch (error) {
-                console.error('Erro ao anexar eventos aos cards:', error);
-            }
+            });
         };
 
         // Inicialização
         const init = () => {
             try {
-                // Inicializar partículas
-                createParticles();
+                // Checa preferências de movimento reduzido
+                checkReducedMotion();
+                
+                // Tema inicial
+                if (localStorage.getItem('theme') === 'dark' || 
+                    (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.body.classList.add('dark-mode');
+                    if (elements.themeToggle) {
+                        elements.themeToggle.checked = true;
+                    }
+                }
+
+                // Carregamento inicial
+                setTimeout(() => {
+                    if (elements.pageLoadingOverlay) {
+                        elements.pageLoadingOverlay.classList.add('hidden');
+                        setTimeout(() => {
+                            elements.pageLoadingOverlay.style.display = 'none';
+                        }, 800);
+                    }
+                }, 1500);
+
+                // Partículas
+                initParticles();
 
                 // Renderizar cards
                 renderCards();
 
-                // Configurar tema
-                if (localStorage.getItem('theme') === 'dark') {
-                    document.body.classList.add('dark-mode');
-                    elements.themeToggle.checked = true;
-                }
+                // Botão voltar ao topo
+                const toggleBackToTop = () => {
+                    if (window.scrollY > 300) {
+                        elements.backToTop.classList.add('visible');
+                        elements.backToTop.setAttribute('aria-hidden', 'false');
+                    } else {
+                        elements.backToTop.classList.remove('visible');
+                        elements.backToTop.setAttribute('aria-hidden', 'true');
+                    }
+                };
 
-                // Eventos de busca
-                if (elements.searchInput) {
-                    elements.searchInput.addEventListener('input', debounce(filterCards, 300));
-                }
+                window.addEventListener('scroll', debounce(toggleBackToTop, 100));
+                elements.backToTop.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: isReducedMotion ? 'auto' : 'smooth' });
+                });
 
-                // Eventos de filtros
-                if (elements.categoryFilter) {
-                    elements.categoryFilter.querySelectorAll('.category-btn').forEach(btn => {
-                        btn.onclick = () => {
-                            elements.categoryFilter.querySelector('.active')?.classList.remove('active');
-                            btn.classList.add('active');
-                            filterCards();
-                        };
-                    });
-                }
-
-                // Evento de tema
-                if (elements.themeToggle) {
-                    elements.themeToggle.addEventListener('change', toggleTheme);
-                }
-
-                // Evento de compartilhamento principal
-                if (elements.mainShareButton) {
-                    elements.mainShareButton.onclick = () => handleShare(null);
-                }
-
-                // Evento de copiar link
-                if (elements.copyLinkBtn) {
-                    elements.copyLinkBtn.onclick = () => {
-                        if (elements.shareLink) {
-                            elements.shareLink.select();
-                            document.execCommand('copy');
-                            showToast('Link copiado para a área de transferência!');
-                        }
-                    };
-                }
-
-                // Eventos de fechamento de modais
-                if (elements.detailsModalClose) {
-                    elements.detailsModalClose.onclick = () => closeModal(elements.detailsModal);
-                }
-                if (elements.modalCloseBtn) {
-                    elements.modalCloseBtn.onclick = () => closeModal(elements.detailsModal);
-                }
-                if (elements.shareModalClose) {
-                    elements.shareModalClose.onclick = () => closeModal(elements.shareModal);
-                }
-                if (elements.shareModalCloseBtn) {
-                    elements.shareModalCloseBtn.onclick = () => closeModal(elements.shareModal);
-                }
-                if (elements.redirectModalClose) {
-                    elements.redirectModalClose.onclick = () => {
-                        clearTimeout(redirectTimeout);
-                        closeModal(elements.redirectNotification);
-                    };
-                }
-
-                // Eventos de redirecionamento
-                if (elements.cancelRedirect) {
-                    elements.cancelRedirect.onclick = () => {
-                        clearTimeout(redirectTimeout);
-                        closeModal(elements.redirectNotification);
-                    };
-                }
-                if (elements.confirmRedirect) {
-                    elements.confirmRedirect.onclick = () => {
-                        clearTimeout(redirectTimeout);
-                        const link = elements.modalLink?.href || '#';
-                        window.open(link, '_blank');
-                        closeModal(elements.redirectNotification);
-                    };
-                }
-
-                // Evento de voltar ao topo
-                if (elements.backToTop) {
-                    elements.backToTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-
-                // Evento de rolagem
-                window.addEventListener('scroll', () => {
-                    if (elements.backToTop) {
-                        elements.backToTop.classList.toggle('visible', window.scrollY > 400);
+                // Filtro e busca
+                elements.searchInput.addEventListener('input', debounce(() => filterCards(), 300));
+                
+                elements.categoryFilter.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.category-btn');
+                    if (btn) {
+                        elements.categoryFilter.querySelectorAll('.category-btn').forEach(b => {
+                            b.classList.remove('active');
+                            b.setAttribute('aria-pressed', 'false');
+                        });
+                        btn.classList.add('active');
+                        btn.setAttribute('aria-pressed', 'true');
+                        filterCards();
                     }
                 });
 
-                // Evento de redimensionamento
-                window.addEventListener('resize', debounce(createParticles, 300));
-
-                // Evento de interação com partículas
-                window.addEventListener('mousemove', (e) => {
-                    updateParticles(e.clientX, e.clientY);
+                // Adiciona aria-pressed aos botões de categoria
+                elements.categoryFilter.querySelectorAll('.category-btn').forEach(btn => {
+                    btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
                 });
 
-                // Evento de teclado
+                // Alternância de tema
+                elements.themeToggle.addEventListener('change', toggleTheme);
+
+                // Compartilhamento da página principal
+                elements.mainShareButton.addEventListener('click', () => {
+                    const url = window.location.href;
+                    elements.shareLink.value = url;
+                    openModal(elements.shareModal, {
+                        title: 'Compartilhar ProcurIA',
+                        body: '<p>Compartilhe o ProcurIA com seus colegas:</p>'
+                    });
+                    generateQRCode(url);
+                });
+
+                // Fechamento de modais
+                [elements.detailsModalClose, elements.modalCloseBtn].forEach(btn => {
+                    btn.addEventListener('click', () => closeModal(elements.detailsModal));
+                });
+
+                [elements.shareModalClose, elements.shareModalCloseBtn].forEach(btn => {
+                    btn.addEventListener('click', () => closeModal(elements.shareModal));
+                });
+
+                elements.redirectModalClose.addEventListener('click', () => {
+                    clearTimeout(redirectTimeout);
+                    closeModal(elements.redirectNotification);
+                });
+
+                // Copiar link
+                elements.copyLinkBtn.addEventListener('click', () => {
+                    try {
+                        elements.shareLink.select();
+                        document.execCommand('copy');
+                        showToast('Link copiado para a área de transferência!');
+                    } catch (error) {
+                        console.error('Erro ao copiar link:', error);
+                        showToast('Erro ao copiar link.');
+                    }
+                });
+
+                // Fechar modais ao clicar fora
+                [elements.detailsModal, elements.shareModal, elements.redirectNotification].forEach(modal => {
+                    modal.addEventListener('click', (e) => {
+                        if (e.target === modal) {
+                            if (modal === elements.redirectNotification) {
+                                clearTimeout(redirectTimeout);
+                            }
+                            closeModal(modal);
+                        }
+                    });
+                });
+
+                // Fechar modais com tecla Esc
                 document.addEventListener('keydown', (e) => {
                     if (e.key === 'Escape') {
-                        closeModal(elements.detailsModal);
-                        closeModal(elements.shareModal);
-                        closeModal(elements.redirectNotification);
+                        [elements.detailsModal, elements.shareModal, elements.redirectNotification].forEach(modal => {
+                            if (modal.classList.contains('active')) {
+                                if (modal === elements.redirectNotification) {
+                                    clearTimeout(redirectTimeout);
+                                }
+                                closeModal(modal);
+                            }
+                        });
+                    }
+                });
+
+                // Tratamento de tema para o sistema
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                    if (!localStorage.getItem('theme')) {
+                        if (event.matches) {
+                            document.body.classList.add('dark-mode');
+                            elements.themeToggle.checked = true;
+                        } else {
+                            document.body.classList.remove('dark-mode');
+                            elements.themeToggle.checked = false;
+                        }
+                        initParticles();
                     }
                 });
             } catch (error) {
                 console.error('Erro na inicialização:', error);
+                if (elements.pageLoadingOverlay) {
+                    elements.pageLoadingOverlay.style.display = 'none';
+                }
+                elements.noResults.style.display = 'block';
+                elements.noResults.innerHTML = `
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Ops! Algo deu errado ao carregar o site. Tente novamente mais tarde.</p>
+                `;
             }
         };
 
-        // Iniciar aplicação quando o DOM estiver carregado
+        // Executar inicialização quando o DOM estiver pronto
         document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
