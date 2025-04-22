@@ -90,7 +90,7 @@ Este projeto está licenciado sob a MIT License. Sinta-se à vontade para usar, 
 
 ## 📬 Contato
 
-Para sugestões, dúvidas ou feedback, crie uma issue no repositório ou entre em contato pelo e-mail: `seu-email@example.com`.
+Para sugestões, dúvidas ou feedback, crie uma issue no repositório ou entre em contato pelo e-mail: `Gustav0.v@hotmail.com`.
 
 ---
 
