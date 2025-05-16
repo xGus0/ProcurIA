@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="./assets/banner.png" alt="Banner ProcurIA" style="max-width: 100%;">
+  <img src="./assets/banner.svg" alt="Banner ProcurIA" style="max-width: 100%;">
 </p>
 
 <p align="center">
-  <img src="./assets/logo.png" alt="Logo ProcurIA" width="120">
+  <img src="./assets/logo.svg" alt="Logo ProcurIA" width="120">
 </p>
 
 # ProcurIA
