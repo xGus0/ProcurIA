@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.svg" alt="Banner ProcurIA" style="max-width: 100%;">
+  <img src="./assets/Banner.jpg" alt="Banner ProcurIA" style="max-width: 100%;">
 </p>
 
 <p align="center">
